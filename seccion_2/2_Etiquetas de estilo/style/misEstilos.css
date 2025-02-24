@@ -1,0 +1,17 @@
+h1{
+
+font-family: 'Courier New', Courier, monospace;
+color: rgb(215, 58, 58);
+
+}
+
+p{
+
+    color: rgb(55, 176, 55);
+    border: 1px;
+    border-style: solid;
+}
+ 
+#perros{
+    color: rgb(127, 63, 183);
+}
