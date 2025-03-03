@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>Ingresos de Usuario 1</title>
+  </head>
+
+  <body>
+      <p>Ingresa tu nombre</p>
+      <input type="text" id="textoo" 
+      <button onclick="mostrarTexto()">Ingresar</button>
+      <h1 id="titulo">No sé tu nombre</h1>    
+
+      <script>
+          function mostrarTexto(){
+              
+              let elementoNombre = document.getElementById("textoo");
+            
+              let elementoTexto = document.getElementById("titulo");
+          
+              let mensaje = "Tú te llamas " + elementoNombre.value;
+              
+         
+              elementoTexto.textContent = mensaje;
+          }
+      </script>
+
+  </body>
+</html>
