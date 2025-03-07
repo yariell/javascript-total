@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Juego de Preguntas y Respuestas</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body onload="iniciarJuego()">
+    <h1>¡Responde las preguntas lo más rápido posible!</h1>
+    
+    <p id="contador">Tiempo restante: 30s</p>
+
+    <h4>1. ¿En qué equipo juega LeBron James?</h4>
+    <input type="text" id="respuesta1">
+    
+    <h4>2. ¿Cuántas Champions ha ganado el Real Madrid?</h4>
+    <input type="text" id="respuesta2">
+    
+    <h4>3. ¿Cuál es la capital de Costa Rica?</h4>
+    <input type="text" id="respuesta3">
+    
+    <h4>4. ¿Qué deporte juega Ja Morant?</h4>
+    <input type="text" id="respuesta4">
+    
+    <h4>5. ¿Qué quiere el Chavo del 8?</h4>
+    <input type="text" id="respuesta5">
+    
+    <button id="finalizar" onclick="finalizarJuego()">Finalizar</button>
+    <button id="intentarDeNuevo" onclick="location.reload()" style="display:none;">Volver a Intentar</button>
+
+    <audio id="audioAlarma">
+      <source src="Audios/gameover.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+      let tiempoRestante = 30;
+      let intervalo;
+
+      function iniciarJuego() {
+        intervalo = setInterval(function() {
+          document.getElementById("contador").textContent = "Tiempo restante: " + tiempoRestante + "s";
+          tiempoRestante--;
+
+          if (tiempoRestante < 0) {
+            clearInterval(intervalo);
+            mostrarGameOver();
+          }
+        }, 1000);
+      }
+
+      function finalizarJuego() {
+        clearInterval(intervalo);  // Detener el contador si el usuario finaliza antes de que se acabe el tiempo
+        mostrarRespuestas();
+      }
+
+      function mostrarRespuestas() {
+        let respuestas = [
+          document.getElementById("respuesta1").value,
+          document.getElementById("respuesta2").value,
+          document.getElementById("respuesta3").value,
+          document.getElementById("respuesta4").value,
+          document.getElementById("respuesta5").value
+        ];
+        
+        alert("Respuestas:\n" + respuestas.join("\n"));
+        document.getElementById("intentarDeNuevo").style.display = "inline";
+      }
+
+      function mostrarGameOver() {
+        let fechaActual = new Date();
+        let fechaTexto = fechaActual.toLocaleString(); 
+
+        alert("Game Over! El tiempo ha terminado.\nFecha y hora: " + fechaTexto);
+        document.getElementById("audioAlarma").play();
+        document.getElementById("intentarDeNuevo").style.display = "inline";
+      }
+    </script>
+  </body>
+</html>
