@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(123, 117, 117);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.calculadora {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #7b6f6f;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #685f5f, #635959);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 120px;
+    margin-bottom: 10px;
+    text-align: right;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    color: white;
+    background-color: #f75252;
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #ff0000;
+    transform: scale(0.95);
+}
+
+#raiz, #potencia, #absoluto, #random {
+    margin: 7px;
+    padding: 8px 12px;
+    width: 85px;
+}
+
+#sumar, #restar, #multiplicar, #dividir {
+    margin: 1px;
+    padding: 8px;
+    width: 40px;
+}
+
+#round, #floor, #ceil {
+    margin: 5px;
+    padding: 8px;
+    width: 60px;
+}
+
+#resultado {
+    width: 200px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
