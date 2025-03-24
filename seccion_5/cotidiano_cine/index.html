@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>cine</title>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Papillo's Cine</h1>
+    <h3>Ingrese su edad aquí.</h3>
+    <input type="number" id="edad">
+    <h3>Por favor seleccione un genero</h3>
+    <div class="botones-genero">
+        <button onclick="recomendar('Drama')" id="drama">Drama</button>
+        <button onclick="recomendar('Comedia')" id="comedia">Comedia</button>
+        <button onclick="recomendar('Musical')" id="musical">Musical</button>
+        <button onclick="recomendar('Crimen')" id="crimen">Crimen</button>
+    </div>
+    <h3 id="resultado"></h3>
+</body>
+</html>

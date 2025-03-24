@@ -18,5 +18,5 @@ function mostrarPrecio() {
             return;
     }
 
-    alert("El precio de la fruta es: " + precio);
+    alert("El precio de la " + fruta + " es: " + precio);
 }
