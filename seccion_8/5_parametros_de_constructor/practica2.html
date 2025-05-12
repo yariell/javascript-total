@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 2</title>
+</head>
+<body>
+    <script>
+        function polo(marca, color, talla) {
+             this.color = color;
+             this.marca = marca;
+             this.talla = talla;
+             this.fabricarPolo = function() {
+                console.log("polo fabricado")
+             };
+         };
+
+         let versace = new polo("beige" , 16);
+         let nike = new polo("black", 18)
+         let adidas = new polo("red", 10)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 1</title>
+</head>
+<body>
+    <script>
+        function autoMovil(marca, modelo, anio) {
+             this.modelo = modelo;
+             this.marca = marca;
+             this.anio = anio;
+             this.arrancar = function() {
+                console.log("ruuuuummmmm")
+             };
+         };
+
+         let nissan = new autoMovil("GTR" , 1999);
+         let toyota = new autoMovil("hilux", 2024)
+         let lexus = new autoMovil("LFA", 2010)
+
+    </script>
+</body>
+</html>
