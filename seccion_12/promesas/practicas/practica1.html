@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Promesas 1</title>
+</head>
+<body>
+<script>
+let promesa;
+
+function test(resultado) {
+    promesa = new Promise(function(resolve, reject) {
+        if (resultado) {
+            resolve("Correcto");
+        } else {
+            reject("Error");
+        }
+    });
+}
+
+
+test(true);
+promesa
+
+    .then(function(res) { console.log(res); })   
+    .catch(function(err) { console.log(err); });
+
+test(false);
+
+promesa
+
+    .then(function(res) { console.log(res); })
+    .catch(function(err) { console.log(err); }); 

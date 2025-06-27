@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica: Callbacks 2</title>
+</head>
+<body>
+    <h1>Práctica: Callbacks 2</h1>
+    <script>
+        function test(callback) {
+            setTimeout(function() {
+                callback();
+            }, 1500);
+        }
+
+        function mensaje() {
+            alert("Mensaje impreso");
+        }
+
+        
+
+        test(mensaje);
+    </script>
+</body>
+</html>

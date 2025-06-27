@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promesas</title>
+</head>
+<body>
+    <script>
+        //las promesas tienen tres estados: pendiente, cumplida, fallida
+        let miPromesa = promise(function(resolve, reject) {
+            setTimeout(function() {
+                let error = false;
+                if (error) {
+                   reject("La promesa ha fallado");
+                } else {
+                    resolve("La promesa se ha cumplido ");
+                }
+            }, );
+        });
+
+        miPromesa
+            .then(function(resultado) {
+                console.log(resultado);
+            })
+            .catch(function(error) {
+                console.error(error);
+            })
+           
+    </script>
+</body>
+</html>

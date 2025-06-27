@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promesa1 = new Promise(function(resolve, reject) {
+            setTimeout(resolve,2000,"hola")
+        });
+
+
+        let promesa2 = new Promise(function(resolve, reject) {
+            setTimeout(resolve,3000,"mundo")
+        });
+
+        promise.all([promesa1, promesa2])
+            .then(function(resultado) {
+                console.log(resultado);
+            })
+
+            console.log("el codigo sigue su camino");
+    </script>
+</body>
+</html>
