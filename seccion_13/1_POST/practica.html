@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<script>
+  function agregarRegistro(nombre, datos) {
+    fetch("https://api.restful-api.dev/objects", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: nombre,
+            data: datos
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Respuesta de la API:", data);
+    })
+    .catch(error => {
+        console.error("Error al agregar registro:", error);
+    });
+  }
+
+
+  agregarRegistro("Juan", { edad: 25, ciudad: "Madrid" });
+</script>

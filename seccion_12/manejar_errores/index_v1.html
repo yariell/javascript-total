@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callbacks
+        function sumarNumeros(a, b, callback){
+            setTimeout(function(){ //para que sea asincronico
+                if(typeof a !== 'number' || typeof b !== 'number'){
+                    return callback(new Error('algun argumento no es numero'));
+                }
+                
+                callback(null, a + b);
+            }, 1000);
+
+            }
+        sumarNumeros(1, 2, function(error, resultado){
+            if(error){
+                return console.error('Error:', error.message);
+            }
+            console.log('Resultado:', resultado);
+        });
+    </script>
+</body>
+</html>
