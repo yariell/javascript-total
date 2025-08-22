@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl-stylesheet version="1.0" encoding="UTF-8">
+<bibliotteca>
+<libro>
+    <titulo>Aprendiendo XSLT</titulo>
+    <autor>Juan Perez</autor>
+    <anio>2023</anio>
+</libro>
+<libro>
+    <titulo>Introducción a XML</titulo>
+    <autor>Maria Lopez</autor>
+    <anio>2022</anio>
+</libro>
+<libro>
+    <titulo>Programación con JavaScript</titulo>
+    <autor>Carlos Gomez</autor>
+    <anio>2021</anio>
+</libro>    
+</bibliotteca
+   

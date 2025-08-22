@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>visualizacion de datos</title>
+        <link rel="stylesheet" href="estilos.css">
+        <script>
+            function mostrarDatos() {
+                const xmlData = localStorage.getItem('usuariosXML');
+                if (xmlData) {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlData, "application/xml");
+
+                    const nombre = xmlDoc.getElementsByTagName("nombre")[0].textContent;
+                    const email = xmlDoc.getElementsByTagName("email")[0].textContent;
+                    const anio = xmlDoc.getElementsByTagName("anio")[0].textContent;
+
+                    document.getElementById("resultado").innerHTML = `
+                        <h2>Datos recibidos:</h2>
+                        <p><strong>Nombre:</strong> ${nombre}</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                        <p><strong>Año de nacimiento:</strong> ${anio}</p>
+                    `;
+                } else {
+                    document.getElementById("resultado").innerHTML =
+                    "<p>No hay datos para mostrar.</p>";
+                }
+            }
+        </script>
+    </head>
+    <body onload="mostrarDatos()">
+        <h1>visualizacion de datos</h1>
+        <div id="resultado"></div>
+    </body>
+</html>
